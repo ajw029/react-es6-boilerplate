@@ -2,6 +2,8 @@
 
 Boilerplate for kick starting a project with the following technologies:
 * [React](https://github.com/facebook/react)
+* Redux
+* Sass 
 * [Babel 6](http://babeljs.io)
 * [Webpack](http://webpack.github.io) for bundling
 * [Webpack Dev Server](http://webpack.github.io/docs/webpack-dev-server.html)
@@ -25,4 +27,3 @@ ESLint with React linting options have been enabled.
 ```
 npm run lint
 ```
-
