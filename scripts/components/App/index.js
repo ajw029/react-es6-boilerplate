@@ -3,6 +3,8 @@ import configureStore from "../../utils/configureStore";
 import {Provider} from "react-redux";
 import reducers from "../../reducers";
 
+import {BrowserRouter as Router, Route} from "react-router-dom";
+
 import Home from "../Home";
 
 export default class App extends PureComponent {
@@ -14,7 +16,9 @@ export default class App extends PureComponent {
     render() {
         return (
             <Provider store={this.store}>
-                <Home />
+                <Router>
+                    <Route exact path="/" component={Home} />
+                </Router>
             </Provider>
         );
     }

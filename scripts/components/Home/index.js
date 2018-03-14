@@ -11,6 +11,7 @@ export class Home extends PureComponent {
     }
 
     render() {
+        console.log(this.props);
         return (
             <div className="container">
                 <h1>Hello, World! I am here</h1>
