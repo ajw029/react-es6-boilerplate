@@ -13,22 +13,22 @@ module.exports = {
         publicPath: '/static/'
     },
     resolve: {
-        extensions: ['', '.js']
+        extensions: ['.js']
     },
     devtool: 'eval-source-map',
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
-        new webpack.NoErrorsPlugin()
+        new webpack.NoEmitOnErrorsPlugin()
     ],
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.scss$/,
-                loaders: ['style', 'css', 'sass']
+                loaders: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.jsx?$/,
-                loaders: ['babel'],
+                loaders: ['babel-loader'],
                 include: path.join(__dirname, 'scripts')
             }
         ]
